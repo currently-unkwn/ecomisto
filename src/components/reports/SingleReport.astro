@@ -35,12 +35,12 @@ const text =
     : `Report on the activities of the public organization <br/>NGO Eco Misto for <span class="color-primary">${year} year</span>`;
 ---
 
-<article class="report">
+<article class="report col-12 tablet-s:col-6">
   <Row>
-    <Frame ratio="3:2" class="picture col-12 tablet:col-5">
+    <Frame ratio="3:2" class="picture col-12">
       <MyPicture src={picture} alt={alt} />
     </Frame>
-    <div class="text col-12 tablet:col-7">
+    <div class="text col-12">
       <Heading
         tagName="h2"
         size="h6"
@@ -101,6 +101,6 @@ const text =
   }
 
   .report :global(.download) {
-    margin-block-start: auto;
+    margin-inline-start: auto;
   }
 </style>

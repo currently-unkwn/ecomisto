@@ -8,15 +8,21 @@ import { getCollection } from "astro:content";
 // Components
 import Section from "../ui/Section.astro";
 import SingleReport from "./SingleReport.astro";
+import Row from "../compositions/Row.astro";
 
 // Data
 const reports = await getCollection("reports");
 
-const sortedReports = reports.sort((a, b) => a.data.year - b.data.year);
+const sortedReports = reports.sort((a, b) => b.data.year - a.data.year);
 ---
 
 <Section class="reports">
-  {sortedReports.map((report) => <SingleReport report={report} />)}
+  <Row
+    rowGap={{ default: "space-8", tabletS: "space-0" }}
+    columnGap={{ default: "space-0", tabletS: "space-8" }}
+  >
+    {sortedReports.map((report) => <SingleReport report={report} />)}
+  </Row>
 </Section>
 
 <style>

@@ -7,5 +7,6 @@
 */
 
 @custom-media --tablet-and-up (width >= 34.37em);
+@custom-media --tablet-s-and-up (width >= 48em);
 @custom-media --laptop-and-up (width >= 68.75em);
 @custom-media --desktop-and-up (width >= 93.75em);

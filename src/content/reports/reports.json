@@ -3,6 +3,13 @@
     "id": 1,
     "year": 2024,
     "href": "https://drive.google.com/file/d/1Q8AxjogfneQ26pzVQPR7jGRxdeSIGbL2/view",
+    "picture": "./images/report_2024.jpg",
+    "alt": "Image"
+  },
+  {
+    "id": 2,
+    "year": 2025,
+    "href": "https://drive.google.com/file/d/13epUjEPxrBt9wCxzI_ynlaTAihqdefrb/view",
     "picture": "./images/report_2025.jpg",
     "alt": "Image"
   }
