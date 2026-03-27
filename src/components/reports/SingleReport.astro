@@ -31,8 +31,8 @@ const { picture, year, href, alt } = report.data;
 
 const text =
   currentLocale === "ua"
-    ? `Звіт про діяльність громадської організації <br/>ГО «Еко Місто» за <span class="color-primary">${year} рік</span>`
-    : `Report on the activities of the public organization <br/>NGO Eco Misto for <span class="color-primary">${year} year</span>`;
+    ? `Звіт про діяльність ГО «Еко Місто» за <span class="color-primary">${year} рік</span>`
+    : `Report on the activities of the public organization Eco Misto for <span class="color-primary">${year} year</span>`;
 ---
 
 <article class="report col-12 tablet-s:col-6">
@@ -101,6 +101,6 @@ const text =
   }
 
   .report :global(.download) {
-    margin-inline-start: auto;
+    /* margin-inline-start: auto; */
   }
 </style>
