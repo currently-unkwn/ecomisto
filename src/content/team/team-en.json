@@ -2,50 +2,57 @@
   {
     "id": 1,
     "name": "Serhiy",
-    "position": "Head of the organization",
+    "position": "Head of the Organization",
     "picture": "./images/sergiy-b.png",
-    "indexId": 1
+    "indexId": 2
   },
   {
     "id": 2,
     "name": "Yaroslav",
     "position": "Project Manager",
     "picture": "./images/yaroslav.png",
-    "indexId": 2
+    "indexId": 3
   },
   {
     "id": 3,
     "name": "Serhiy",
     "position": "Financial Manager",
     "picture": "./images/sergiy.png",
-    "indexId": 3
+    "indexId": 4
   },
   {
     "id": 4,
     "name": "Sonya",
     "position": "Designer",
     "picture": "./images/sonya.png",
-    "indexId": 4
+    "indexId": 5
   },
   {
     "id": 5,
     "name": "Maksym",
     "position": "Workshop Administrator",
     "picture": "./images/maksym.png",
-    "indexId": 6
+    "indexId": 7
   },
   {
     "id": 8,
     "name": "Oleksii",
     "position": "Lab Assistant",
     "picture": "./images/oleksiy.png",
-    "indexId": 9
+    "indexId": 10
   },
   {
     "id": 9,
     "name": "Katya",
     "position": "Communications manager",
     "picture": "./images/katya.png",
-    "indexId": 7
+    "indexId": 8
+  },
+  {
+    "id": 10,
+    "name": "Olya",
+    "position": "Head of the Board",
+    "picture": "./images/olya.png",
+    "indexId": 1
   }
 ]
