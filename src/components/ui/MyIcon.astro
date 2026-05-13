@@ -3,11 +3,12 @@ import type { Lang } from "@/i18n/defaultLangOptions";
 
 type Props = {
   name: string;
+  color?: string;
 };
 
-const { name } = Astro.props;
+const { name, color } = Astro.props;
 ---
 
-<svg>
+<svg style={color ? `color: #${color}` : undefined}>
   <use href={`/sprite.svg#${name}`}></use>
 </svg>

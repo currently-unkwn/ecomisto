@@ -5,6 +5,7 @@ import SingleSlideGallery from "@/components/project/SingleSlideGallery.astro";
 import Blockquote from "@/components/project/Blockquote.astro";
 import BlockquoteFooter from "@/components/project/BlockquoteFooter.astro";
 import Video from "@/components/project/Video.astro";
+import Embed3D from "@/components/project/Embed3D.astro";
 import Badge from "@/components/project/Badge.astro";
 import Centered from "@/components/project/Centered.astro";
 import TextContent from "@/components/project/TextContent.astro";
@@ -45,4 +46,5 @@ export const components = {
   Link,
   MyPicture,
   Annotation,
+  Embed3D,
 };

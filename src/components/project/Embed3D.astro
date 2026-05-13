@@ -1,0 +1,31 @@
+---
+import Frame from "../compositions/Frame.astro";
+import Link from "../ui/Link.astro";
+import Annotation from "./Annotation.astro";
+import Centered from "./Centered.astro";
+
+type Props = {
+  src: string;
+};
+
+const { src } = Astro.props;
+---
+
+<div class="3d-embed">
+  <Frame ratio="16:9">
+    <iframe
+      src={src}
+      width="640"
+      height="360"
+      frameborder="0"
+      allow="fullscreen; picture-in-picture"
+      loading="lazy"
+      allowfullscreen></iframe>
+  </Frame>
+</div>
+
+<style>
+  iframe {
+    border-radius: var(--rounded-lg);
+  }
+</style>
