@@ -97,11 +97,11 @@ const title = currentLocale === "ua" ? titleUA : titleEN;
     /* margin-top: auto; */
   }
 
-  .publication :global(svg) {
+  .publication :global(.button-arrow) :global(svg) {
     transition: transform var(--transition-default);
   }
 
-  .publication:hover :global(svg) {
+  .publication:hover :global(.button-arrow) :global(svg) {
     transform: translateY(-2px) rotate(0deg);
   }
 </style>
