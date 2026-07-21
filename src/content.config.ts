@@ -70,6 +70,21 @@ const reports = defineCollection({
   schema: reportsSchema,
 });
 
+const librarySchema = (context: SchemaContext) =>
+  z.object({
+    id: z.number(),
+    href: z.string(),
+    picture: context.image(),
+    alt: z.string(),
+    titleUA: z.string(),
+    titleEN: z.string(),
+  });
+
+const library = defineCollection({
+  loader: file("./src/content/library/publications.json"),
+  schema: librarySchema,
+});
+
 const projects = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/projects" }),
   schema: ({ image }) =>
@@ -113,6 +128,7 @@ const projects = defineCollection({
 export const collections = {
   members,
   membersEn,
+  library,
   reports,
   projects,
 };

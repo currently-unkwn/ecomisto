@@ -1,14 +1,13 @@
 ---
-// Tools
-import type { Lang } from "@/i18n/defaultLangOptions";
-
-// Compositions
 // Components
 import Heading from "../ui/Heading.astro";
 import Section from "../ui/Section.astro";
 
-// Translations
-const currentLocale = Astro.currentLocale as Lang;
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
 ---
 
 <Section class="hero">
@@ -17,7 +16,7 @@ const currentLocale = Astro.currentLocale as Lang;
     size="h3"
     class="font-heading color-secondary text-center"
   >
-    {currentLocale === "ua" ? "Публічна звітність" : "Public reports"}</Heading
+    {title}</Heading
   >
 </Section>
 

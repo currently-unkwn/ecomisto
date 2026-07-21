@@ -9,10 +9,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Center from "@/components/compositions/Center.astro";
 
 // Components
-import Hero from "@/components/reports/Hero.astro";
+import PageHero from "@/components/ui/PageHero.astro";
 
 // Data
-import { reportsData } from "@/data/siteData";
+
 import Stack from "@/components/compositions/Stack.astro";
 import ReportsSection from "@/components/reports/ReportsSection.astro";
 
@@ -28,7 +28,9 @@ const title = currentLocale === "ua" ? "Звітність" : "Reports";
     space={{ default: "space-6", tablet: "space-7", laptop: "space-9" }}
   >
     <Stack space="space-10">
-      <Hero />
+      <PageHero
+        title={currentLocale === "ua" ? "Публічна звітність" : "Public reports"}
+      />
       <ReportsSection />
     </Stack>
   </Center>

@@ -29,6 +29,10 @@ export const navData = {
       href: "/projects",
     },
     {
+      title: "Бібліотека",
+      href: "/library",
+    },
+    {
       title: "Звітність",
       href: "/reports",
     },
@@ -41,6 +45,10 @@ export const navData = {
     {
       title: "Projects",
       href: "/projects",
+    },
+    {
+      title: "Library",
+      href: "/library",
     },
     {
       title: "Reports",
@@ -459,6 +467,7 @@ export const buttonsData = {
     view: "Дивитись",
     backToMain: "Назад на головну",
     viewReport: "Переглянути звіт",
+    read: "Читати",
   },
   en: {
     support: "Donate",
@@ -468,6 +477,7 @@ export const buttonsData = {
     view: "View",
     backToMain: "Back to main",
     viewReport: "View the report",
+    read: "Read",
   },
 };
 

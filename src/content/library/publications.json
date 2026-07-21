@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+
+    "href": "https://drive.google.com/file/d/11Lf3zf2Y7ZsMV8BsWL6qKHq8Hz64s7PH/view",
+    "picture": "./images/diy-solutions.png",
+    "alt": "Image",
+    "titleUA": "DIY-рішення для міського садівництва",
+    "titleEN": "DIY solutions for urban gardening"
+  },
+  {
+    "id": 2,
+
+    "href": "https://drive.google.com/file/d/111bLCysJII_zFcZCyk61lmP4YowWjXVJ/view",
+    "picture": "./images/small-initiatives.png",
+    "alt": "Image",
+    "titleUA": "Малі ініціативи, що змінюють міста",
+    "titleEN": "Small initiatives that change cities"
+  },
+  {
+    "id": 3,
+
+    "href": "https://drive.google.com/file/d/1ceJjnWk8fY3ey28OGRkWLtscxqm5sv8x/view",
+    "picture": "./images/cycling-plan.png",
+    "alt": "Image",
+    "titleUA": "План розвитку велосипедної інфраструктури Чернігівської територіальної громади",
+    "titleEN": "Cycling infrastructure development plan of the Chernihiv territorial community"
+  },
+  {
+    "id": 4,
+
+    "href": "https://drive.google.com/file/d/1a2f9sT73jvAiSr2NgLNl6I8xVFOxKsGG/view",
+    "picture": "./images/revitalize-space.png",
+    "alt": "Image",
+    "titleUA": "Оживити публічний простір",
+    "titleEN": "Revitalize public space"
+  },
+  {
+    "id": 5,
+    "href": "https://drive.google.com/file/d/1DPvgjvKTDQL5ZXvsBbGPc4MIhH6t4fB8/view",
+    "picture": "./images/concrete-garden.png",
+    "alt": "Image",
+    "titleUA": "Сад на бетоні. Історія одного громадського простору",
+    "titleEN": "Garden on Concrete: The Story of a Public Space"
+  }
+]

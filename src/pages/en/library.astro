@@ -7,16 +7,16 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 // Compositions
 import Center from "@/components/compositions/Center.astro";
-import Stack from "@/components/compositions/Stack.astro";
 
 // Components
 import PageHero from "@/components/ui/PageHero.astro";
-import ReportsSection from "@/components/reports/ReportsSection.astro";
+import LibrarySection from "@/components/library/LibrarySection.astro";
+import Stack from "@/components/compositions/Stack.astro";
 
 // Translations
 const currentLocale = Astro.currentLocale as Lang;
 
-const title = currentLocale === "ua" ? "Звітність" : "Reports";
+const title = currentLocale === "ua" ? "Бібліотека" : "Library";
 ---
 
 <BaseLayout seo={{ title }}>
@@ -25,10 +25,8 @@ const title = currentLocale === "ua" ? "Звітність" : "Reports";
     space={{ default: "space-6", tablet: "space-7", laptop: "space-9" }}
   >
     <Stack space="space-10">
-      <PageHero
-        title={currentLocale === "ua" ? "Публічна звітність" : "Public reports"}
-      />
-      <ReportsSection />
+      <PageHero title={title} />
+      <LibrarySection />
     </Stack>
   </Center>
 </BaseLayout>

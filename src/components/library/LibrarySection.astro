@@ -1,0 +1,35 @@
+---
+// Tools
+import { getCollection } from "astro:content";
+
+// Compositions
+
+// Components
+import Section from "../ui/Section.astro";
+import SinglePublication from "./SinglePublication.astro";
+import Row from "../compositions/Row.astro";
+
+// Data
+const library = await getCollection("library");
+
+const sortedPublications = library.sort((a, b) => b.data.id - a.data.id);
+---
+
+<Section class="library">
+  <Row
+    rowGap={{ default: "space-6" }}
+    columnGap={{ default: "space-0", tablet: "space-6" }}
+  >
+    {
+      sortedPublications.map((publication) => (
+        <SinglePublication publication={publication} />
+      ))
+    }
+  </Row>
+</Section>
+
+<style>
+  .library {
+    padding-block-end: var(--space-11-fixed);
+  }
+</style>

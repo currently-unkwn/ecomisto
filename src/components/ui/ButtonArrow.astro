@@ -10,6 +10,7 @@ type Props = {
   tagName?: "a" | "button";
   rel?: string;
   isExternal?: boolean;
+  isAnimated?: boolean;
   class?: string;
   style: keyof typeof styleOptions;
   noArrow?: boolean;
@@ -22,6 +23,7 @@ const {
   style,
   rel = "",
   isExternal,
+  isAnimated = true,
   noArrow = false,
   ...rest
 } = Astro.props;
@@ -35,6 +37,7 @@ const Tag = tagName;
     classList,
     styleOptions[style],
     { ["no-arrow"]: noArrow },
+    { ["animated"]: isAnimated },
   ]}
   rel={`${rel}${isExternal ? "nofollow noopener norefferer external" : ""}`}
   {...rest}
@@ -58,26 +61,10 @@ const Tag = tagName;
     & svg {
       margin-inline-start: 0;
       transform: translateY(-2px) rotate(-45deg);
-
-      transition: transform var(--transition-default);
-    }
-
-    /* &:hover {
-      transform: translateX(-4px);
-    } */
-
-    &:hover svg {
-      transform: translateY(-2px) rotate(0deg);
     }
   }
 
-  .button-arrow.no-arrow {
-    & svg {
-      display: none;
-    }
-  }
-
-  .button-arrow::after {
+  .button-arrow.animated::after {
     content: "";
     display: block;
     position: absolute;
@@ -89,14 +76,14 @@ const Tag = tagName;
     background-color: currentColor;
   }
 
-  .button-arrow::after {
+  .button-arrow.animated::after {
     transform: scaleX(0);
 
     transform-origin: right;
     transition: transform 300ms var(--ease);
   }
 
-  .button-arrow:hover::after {
+  .button-arrow.animated:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
@@ -107,5 +94,25 @@ const Tag = tagName;
 
   .button-arrow.secondary {
     --_color: var(--color-secondary);
+  }
+
+  /**
+    No Arrow State
+   */
+  .button-arrow.no-arrow {
+    & svg {
+      display: none;
+    }
+  }
+
+  /**
+    Animated State
+   */
+  .button-arrow.animated svg {
+    transition: transform var(--transition-default);
+  }
+
+  .button-arrow.animated:hover svg {
+    transform: translateY(-2px) rotate(0deg);
   }
 </style>

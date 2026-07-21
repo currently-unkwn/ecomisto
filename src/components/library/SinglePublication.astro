@@ -1,0 +1,107 @@
+---
+// Tools
+import type { Lang } from "@/i18n/defaultLangOptions";
+import type { CollectionEntry } from "astro:content";
+
+// Components
+import MyPicture from "../ui/MyPicture.astro";
+import Frame from "../compositions/Frame.astro";
+import Heading from "../ui/Heading.astro";
+import ButtonArrow from "../ui/ButtonArrow.astro";
+
+// Data
+import { buttonsData } from "@/data/siteData";
+import Stack from "../compositions/Stack.astro";
+import Link from "../ui/Link.astro";
+
+// Translations
+const currentLocale = Astro.currentLocale as Lang;
+
+const buttons = buttonsData[currentLocale];
+
+// Types
+type Props = {
+  publication: CollectionEntry<"library">;
+};
+
+// Props
+const { publication } = Astro.props;
+const { picture, href, alt, titleEN, titleUA } = publication.data;
+
+// Translations
+
+const title = currentLocale === "ua" ? titleUA : titleEN;
+---
+
+<article class="publication col-12 tablet:col-6 tablet-s:col-4 desktop:col-3">
+  <Link href={href} isExternal target="_blank">
+    <Stack space="space-6">
+      <Frame ratio="2:3" class="picture">
+        <MyPicture src={picture} alt={alt} />
+      </Frame>
+      <Heading tagName="h2" size="h6" class="color-secondary font-bold title"
+        >{title}</Heading
+      >
+    </Stack>
+    <ButtonArrow
+      tagName="a"
+      isAnimated={false}
+      style="primary"
+      href="#"
+      class="read"
+      >{buttons.read}
+    </ButtonArrow>
+  </Link>
+</article>
+
+<style>
+  .publication {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--heading-1);
+  }
+
+  .picture {
+    block-size: 100%;
+    overflow: hidden;
+
+    --_border-radius: var(--rounded-2xl);
+    background-color: var(--color-secondary);
+    border-radius: var(--_border-radius);
+
+    @media (--laptop-and-up) {
+      --_border-radius: var(--rounded-3xl);
+    }
+
+    transition:
+      transform 75ms var(--ease),
+      box-shadow 75ms var(--ease);
+  }
+
+  .publication:hover .picture {
+    transform: translate(-13px, -13px);
+    box-shadow: 13px 13px 0px 0px rgba(33, 61, 48, 0.75);
+    -webkit-box-shadow: 13px 13px 0px 0px rgba(33, 61, 48, 0.75);
+    -moz-box-shadow: 13px 13px 0px 0px rgba(33, 61, 48, 0.75);
+  }
+
+  .read {
+    align-self: flex-end;
+
+    padding-block-start: var(--space-6);
+    /* margin-top: auto; */
+  }
+
+  .publication :global(svg) {
+    transition: transform var(--transition-default);
+  }
+
+  .publication:hover :global(svg) {
+    transform: translateY(-2px) rotate(0deg);
+  }
+</style>
