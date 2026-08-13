@@ -96,7 +96,7 @@ export const achievmentsData = {
       "right-rotate": "270deg",
     },
     {
-      title: "1060",
+      title: "1089",
       description: "соціальних велосипедів видано",
       id: "primary-light",
       "left-translateX": "-100%",
@@ -124,7 +124,7 @@ export const achievmentsData = {
       "right-rotate": "270deg",
     },
     {
-      title: "1060",
+      title: "1089",
       description: "community bikes distributed",
       id: "primary-light",
       "left-translateX": "-100%",
